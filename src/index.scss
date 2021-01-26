@@ -1,0 +1,15 @@
+$font-size: 1rem;
+$font-color: lch(53 105 40);
+
+html {
+  font-size: $font-size;
+}
+
+.container {
+  margin-top: 100px;
+  align-items: center;
+}
+
+.signup-container {
+  padding: 0 0 5px 0;
+}
