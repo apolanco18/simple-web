@@ -1,23 +1,46 @@
-import './index.scss';
+// import './index.scss';
+
+// const Button = (props = {}) => {
+
+//     const onButtonClick = () => {
+//         console.log(props)
+//         if(props.callback){ 
+//             props.callback();
+//         }
+//         else{
+//             alert("Warning You Have Download Virus")
+//         }
+//     }
+//     const text = props.text || "Click me";
+
+
+//     return (<button onClick={onButtonClick} className={}> {text}</button>)
+//   }
+
+//   export default Button;
+
+import React, { Component, useState } from "react";
+
 
 const Button = (props = {}) => {
+    const [value,updateValueFunction] = useState(null);
+
 
     const onButtonClick = () => {
-        console.log(props)
-        if(props.callback){ 
-            props.callback();
+        if(props.callback){
+            props.callBack()
         }
-        else{
-            alert("Warning You Have Download Virus")
+        else {
+            alert("Hello World")
         }
-    }
-    const text = props.text || "Click me";
+    };
 
-    const element = document.createElement("button");
-    element.className = "cta-button";
-    element.innerHTML = text;
-    element.addEventListener("click",onButtonClick,false);
-    return element;
-  }
+    const newVariable = () => {};
 
-  export default Button;
+    return(
+        <button onClick={onButtonClick}>{props.text || "CLICK ME"}</button> 
+    );
+
+}
+
+export default Button;

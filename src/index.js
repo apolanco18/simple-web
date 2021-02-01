@@ -1,3 +1,5 @@
+import React from "react"
+import ReactDOM from "react-dom"
 import Button from "./components/Button"
 import Title from "./components/Title"
 import Input from "./components/Input"
@@ -54,17 +56,27 @@ const App = () => {
         text: "Submitt for Ultimate Power",
     })
     );
-    element.appendChild(Button({
-        text:'Hello',
-        callback:randStory
-    }));
-    element.appendChild(Button({
-        text:'Story 2',
-        callback:randStory
-    }));
+    // element.appendChild(Button({
+    //     text:'Hello',
+    //     callback:randStory
+    // }));
+    // element.appendChild(Button({
+    //     text:'Story 2',
+    //     callback:randStory
+    // }));
 
 
-    element.appendChild(inputDiv);
+    const reactButton = ReactDOM.render(
+        <Button 
+            text = "New Story"
+            callback = {randStory}
+        />
+    )
+
+    element.appendChild(reactButton);
+
+
+    // element.appendChild(inputDiv);
 
 
 
